@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403174105016",
+    "project_id": "messengerapp-cf3da",
+    "storage_bucket": "messengerapp-cf3da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403174105016:android:1037fcf300885fe749394d",
+        "android_client_info": {
+          "package_name": "com.example.messengerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403174105016-7fh38i40mjsspgaqubq5fqoed2j8jsh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Ya71xJ1T0x4YtADM4xPRbDvQWL2KbEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403174105016-7fh38i40mjsspgaqubq5fqoed2j8jsh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
