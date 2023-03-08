@@ -9,7 +9,7 @@
 
         <import type="android.view.View" />
 
-        <import type="com.example.messengerapp.ui.chat.ChatViewModel" />
+        <import type="com.example.messengerapp.ui.chats.ChatsViewModel" />
 
         <variable
             name="viewmodel"

@@ -1,7 +1,7 @@
 package com.example.messengerapp
 
 import android.app.Application
-import com.fredrikbogg.android_chat_app.util.SharedPreferencesUtil
+import com.example.messengerapp.util.SharedPreferencesUtil
 
 class App:Application() {
     override fun onCreate() {

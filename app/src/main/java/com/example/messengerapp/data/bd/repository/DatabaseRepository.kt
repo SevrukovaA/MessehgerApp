@@ -1,5 +1,6 @@
 package com.example.messengerapp.data.bd.repository
 
+import android.widget.ListView
 import com.example.messengerapp.data.bd.entity.*
 import com.example.messengerapp.data.bd.remote.FirebaseDataSource
 import com.example.messengerapp.data.bd.remote.FirebaseReferenceChildObserver
@@ -122,55 +123,25 @@ class DatabaseRepository {
         }.addOnFailureListener { b.invoke(Result.Error(it.message)) }
     }
 
-    //endregion
 
-    //#region Load and Observe
 
-    fun loadAndObserveUser(
-        userID: String,
-        observer: FirebaseReferenceValueObserver,
-        b: ((Result<User>) -> Unit)
-    ) {
-        firebaseDatabaseService.attachUserObserver(User::class.java, userID, observer, b)
+    fun loadAndObserveUser(userID: String,observer: FirebaseReferenceValueObserver, b: (Result<User>) -> Unit) {
+        firebaseDatabaseService.attachUserObserver<User>(User::class.java, userID, observer, b)
     }
 
-    fun loadAndObserveUserInfo(
-        userID: String,
-        observer: FirebaseReferenceValueObserver,
-        b: ((Result<UserInfo>) -> Unit)
-    ) {
-        firebaseDatabaseService.attachUserInfoObserver(UserInfo::class.java, userID, observer, b)
+    fun loadAndObserveUserInfo(userID: String,observer: FirebaseReferenceValueObserver,b: ((Result<UserInfo>) -> Unit)) {
+        firebaseDatabaseService.attachUserInfoObserver<UserInfo>(UserInfo::class.java, userID, observer, b)
     }
 
-    fun loadAndObserveUserNotifications(
-        userID: String,
-        observer: FirebaseReferenceValueObserver,
-        b: ((Result<MutableList<UserNotification>>) -> Unit)
-    ) {
-        firebaseDatabaseService.attachUserNotificationsObserver(
-            UserNotification::class.java,
-            userID,
-            observer,
-            b
-        )
+    fun loadAndObserveUserNotifications(userID: String, observer: FirebaseReferenceValueObserver,b: ((Result<MutableList<UserNotification>>) -> Unit)) {
+        firebaseDatabaseService.attachUserNotificationsObserver<UserNotification>(UserNotification::class.java, userID, observer,b)}
+
+    fun loadAndObserveMessagesAdded( messagesID: String,observer: FirebaseReferenceChildObserver,
+        b:((Result<Message>) -> Unit) ){firebaseDatabaseService.attachMessagesObserver<Message>(Message::class.java, messagesID, observer, b)}
+
+    fun loadAndObserveChat(chatID: String,observer: FirebaseReferenceValueObserver, b:((Result<Chat>) -> Unit)) {
+        firebaseDatabaseService.attachChatObserver<Chat>(Chat::class.java, chatID, observer, b)
     }
 
-    fun loadAndObserveMessagesAdded(
-        messagesID: String,
-        observer: FirebaseReferenceChildObserver,
-        b: ((Result<Message>) -> Unit)
-    ) {
-        firebaseDatabaseService.attachMessagesObserver(Message::class.java, messagesID, observer, b)
-    }
-
-    fun loadAndObserveChat(
-        chatID: String,
-        observer: FirebaseReferenceValueObserver,
-        b: ((Result<Chat>) -> Unit)
-    ) {
-        firebaseDatabaseService.attachChatObserver(Chat::class.java, chatID, observer, b)
-    }
-
-    //endregion
 }
 

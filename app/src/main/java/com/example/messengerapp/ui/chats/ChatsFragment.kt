@@ -12,10 +12,10 @@ import com.example.messengerapp.App
 import com.example.messengerapp.R
 import com.example.messengerapp.data.EventObserver
 import com.example.messengerapp.data.model.ChatWithUserInfo
-import com.example.messengerapp.databinding.FragmentChatBinding
 import com.example.messengerapp.databinding.FragmentChatsBinding
 import com.example.messengerapp.ui.chat.ChatFragment
 import com.example.messengerapp.util.convertTwoUserIDs
+
 
 
 class ChatsFragment : Fragment() {
@@ -29,7 +29,7 @@ class ChatsFragment : Fragment() {
     ): View? {
         viewDataBinding =
             FragmentChatsBinding.inflate(inflater, container, false).apply { viewmodel = viewModel }
-               viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
+        viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
         return viewDataBinding.root
     }
 

@@ -7,15 +7,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.messengerapp.data.model.ChatWithUserInfo
 import com.example.messengerapp.databinding.ListItemChatBinding
-import com.example.messengerapp.ui.chat.ChatViewModel
 
 
-class ChatsListAdapter internal constructor(private val viewModel: ChatViewModel) :
+class ChatsListAdapter internal constructor(private val viewModel: ChatsViewModel) :
     ListAdapter<(ChatWithUserInfo), ChatsListAdapter.ViewHolder>(ChatDiffCallback()) {
 
     class ViewHolder(private val binding: ListItemChatBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(viewModel: ChatViewModel, item: ChatWithUserInfo) {
+        fun bind(viewModel: ChatsViewModel, item: ChatWithUserInfo) {
             binding.viewmodel = viewModel
             binding.chatwithuserinfo = item
             binding.executePendingBindings()

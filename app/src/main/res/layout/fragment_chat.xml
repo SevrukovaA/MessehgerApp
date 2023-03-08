@@ -65,7 +65,7 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:maxLines="6"
-                android:text="@android:string/emptyPhoneNumber" />
+                android:text="@={viewmodel.newMessageText}" />
 
             <Button
                 android:id="@+id/sendBtn"
@@ -73,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
+                android:onClick="@{() -> viewmodel.sendMessagePressed()}"
                 android:text="@string/send"
                 android:textSize="14sp" />
         </LinearLayout>

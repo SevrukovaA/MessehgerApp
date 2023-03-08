@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.messengerapp.data.bd.entity.*
 import com.example.messengerapp.data.bd.repository.DatabaseRepository
 import com.example.messengerapp.ui.DefaultViewModel
-import  com.example.messengerapp.data.Result
+import com.example.messengerapp.data.Result
 import com.example.messengerapp.util.addNewItem
 import com.example.messengerapp.util.convertTwoUserIDs
 import com.example.messengerapp.util.removeItem

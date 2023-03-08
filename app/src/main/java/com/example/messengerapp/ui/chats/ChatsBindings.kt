@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.messengerapp.R
 import com.example.messengerapp.data.bd.entity.Message
 import com.example.messengerapp.data.model.ChatWithUserInfo
-import com.fredrikbogg.android_chat_app.ui.chats.ChatsListAdapter
-import com.fredrikbogg.android_chat_app.ui.chats.ChatsViewModel
+
 
 
 @BindingAdapter("bind_chats_list")

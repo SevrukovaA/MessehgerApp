@@ -7,7 +7,7 @@ import com.example.messengerapp.data.bd.entity.User
 
 
 @BindingAdapter("bind_users_list")
-fun bindUsersList(listView: RecyclerView, items: List<User>?) {
+public fun bindUsersList(listView: RecyclerView, items: List<User>?) {
     items?.let { (listView.adapter as UsersListAdapter).submitList(items) }
 }
 

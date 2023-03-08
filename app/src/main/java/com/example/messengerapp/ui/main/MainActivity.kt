@@ -12,8 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.messengerapp.R
 import com.example.messengerapp.data.bd.remote.FirebaseDataSource
-import com.fredrikbogg.android_chat_app.ui.main.MainViewModel
-import com.fredrikbogg.android_chat_app.util.forceHideKeyboard
+import com.example.messengerapp.util.forceHideKeyboard
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -81,11 +80,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupViewModelObservers() {
         viewModel.userNotificationsList.observe(this, {
-            if (it.size > 0) {
-                notificationsBadge.number = it.size
-                notificationsBadge.isVisible = true
-            } else {
-                notificationsBadge.isVisible = false
+            if (it != null) {
+                if (it.size > 0) {
+                    notificationsBadge.number = it.size
+                    notificationsBadge.isVisible = true
+                } else {
+                    notificationsBadge.isVisible = false
+                }
             }
         })
     }

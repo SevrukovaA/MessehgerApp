@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.messengerapp.databinding.FragmentChatBinding
 import com.example.messengerapp.databinding.ToolbarAddonChatBinding
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_chat.*
 
 
 class ChatFragment : Fragment() {

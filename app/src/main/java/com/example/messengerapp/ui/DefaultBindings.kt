@@ -7,6 +7,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.messengerapp.R
 import com.squareup.picasso.Picasso
+
 import jp.wasabeef.picasso.transformations.BlurTransformation
 import java.text.SimpleDateFormat
 import java.util.*
@@ -50,7 +51,7 @@ fun TextView.bindEpochTimeMsToDateWithDaysAgo(epochTimeMs: Long) {
 
 @SuppressLint("SimpleDateFormat")
 @BindingAdapter("bind_epochTimeMsToDate")
-private fun TextView.bindEpochTimeMsToDate(epochTimeMs: Long) {
+fun TextView.bindEpochTimeMsToDate(epochTimeMs: Long) {
     if (epochTimeMs > 0) {
         val currentTimeMs = Date().time
         val numOfDays = TimeUnit.MILLISECONDS.toDays(currentTimeMs - epochTimeMs)
