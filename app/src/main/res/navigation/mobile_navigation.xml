@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/navigation_chats"
-        android:name="com.fredrikbogg.android_chat_app.ui.chats.ChatsFragment"
+        android:name="com.example.messengerapp.ui.chats.ChatsFragment"
         android:label="@string/title_chats"
         tools:layout="@layout/fragment_chats">
         <action
@@ -15,12 +15,12 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.fredrikbogg.android_chat_app.ui.notifications.NotificationsFragment"
+        android:name="com.example.messengerapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_users"
-        android:name="com.fredrikbogg.android_chat_app.ui.users.UsersFragment"
+        android:name="com.example.messengerapp.ui.users.UsersFragment"
         android:label="@string/title_users"
         tools:layout="@layout/fragment_users">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.fredrikbogg.android_chat_app.ui.settings.SettingsFragment"
+        android:name="com.example.messengerapp.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -40,16 +40,16 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.fredrikbogg.android_chat_app.ui.profile.ProfileFragment"
+        android:name="com.example.messengerapp.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.fredrikbogg.android_chat_app.ui.chat.ChatFragment"
+        android:name="com.example.messengerapp.ui.chat.ChatFragment"
         android:label="@string/title_chat" />
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.fredrikbogg.android_chat_app.ui.start.StartFragment"
+        android:name="com.example.messengerapp.ui.start.StartFragment"
         android:label="Start">
         <action
             android:id="@+id/action_startFragment_to_createAccountFragment"
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.fredrikbogg.android_chat_app.ui.start.login.LoginFragment"
+        android:name="com.example.messengerapp.ui.start.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
-        android:name="com.fredrikbogg.android_chat_app.ui.start.createAccount.CreateAccountFragment"
+        android:name="com.example.messengerapp.ui.start.login.createAccount.CreateAccountFragment"
         android:label="Create Account"
         tools:layout="@layout/fragment_create_account">
         <action
