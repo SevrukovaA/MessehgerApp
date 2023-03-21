@@ -20,9 +20,9 @@ class CreateAccountViewModel : DefaultViewModel() {
     private val mIsCreatedEvent = MutableLiveData<Event<FirebaseUser>>()
 
     val isCreatedEvent: LiveData<Event<FirebaseUser>> = mIsCreatedEvent
-    val displayNameText = MutableLiveData<String>() // Two way
-    val emailText = MutableLiveData<String>() // Two way
-    val passwordText = MutableLiveData<String>() // Two way
+    val displayNameText = MutableLiveData<String>()
+    val emailText = MutableLiveData<String>()
+    val passwordText = MutableLiveData<String>()
     val isCreatingAccount = MutableLiveData<Boolean>()
 
     private fun createAccount() {

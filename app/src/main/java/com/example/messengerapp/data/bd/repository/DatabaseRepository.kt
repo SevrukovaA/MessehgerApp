@@ -73,9 +73,7 @@ class DatabaseRepository {
         firebaseDatabaseService.removeMessages(messagesID)
     }
 
-    //endregion
 
-    //region Load Single
 
     fun loadUser(userID: String, b: ((Result<User>) -> Unit)) {
         firebaseDatabaseService.loadUserTask(userID).addOnSuccessListener {
@@ -95,9 +93,7 @@ class DatabaseRepository {
         }.addOnFailureListener { b.invoke(Result.Error(it.message)) }
     }
 
-    //endregion
 
-    //region Load List
 
     fun loadUsers(b: ((Result<MutableList<User>>) -> Unit)) {
         b.invoke(Result.Loading)

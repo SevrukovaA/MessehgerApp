@@ -5,10 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="#7BB5D6"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-    tools:ignore="Overdraw">
+    tools:ignore="Overdraw"
+    android:layout_alignParentTop="false"
+    android:layout_alignParentEnd="true"
+    android:layout_centerInParent="true">
 
 </androidx.appcompat.widget.Toolbar>
+
 

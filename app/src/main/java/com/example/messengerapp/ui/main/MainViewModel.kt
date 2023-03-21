@@ -1,6 +1,6 @@
 package com.example.messengerapp.ui.main
 
-import androidx.lifecycle.LiveData
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.messengerapp.App
@@ -12,6 +12,7 @@ import com.example.messengerapp.data.bd.repository.AuthRepository
 import com.example.messengerapp.data.bd.repository.DatabaseRepository
 import com.google.firebase.auth.FirebaseUser
 import  com.example.messengerapp.data.Result
+
 
 
 class MainViewModel : ViewModel() {

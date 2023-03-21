@@ -61,7 +61,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="@string/enter_message"
+                android:hint="enter_message"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:maxLines="6"
@@ -74,7 +74,7 @@
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
                 android:onClick="@{() -> viewmodel.sendMessagePressed()}"
-                android:text="@string/send"
+                android:text="send"
                 android:textSize="14sp" />
         </LinearLayout>
 

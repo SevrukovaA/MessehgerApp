@@ -17,6 +17,8 @@ import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navView: BottomNavigationView
@@ -79,7 +81,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViewModelObservers() {
-        viewModel.userNotificationsList.observe(this, {
+        viewModel.userNotificationsList.observe(this) {
             if (it != null) {
                 if (it.size > 0) {
                     notificationsBadge.number = it.size
@@ -88,8 +90,9 @@ class MainActivity : AppCompatActivity() {
                     notificationsBadge.isVisible = false
                 }
             }
-        })
+        }
     }
+
 
     fun showGlobalProgressBar(show: Boolean) {
         if (show) mainProgressBar.visibility = View.VISIBLE
